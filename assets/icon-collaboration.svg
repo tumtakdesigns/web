@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <title>Wireframe cube icon</title>
+  <g fill="none" stroke="#E7FF24" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M100 14 L174 53 L100 94 L26 53 Z"/>
+    <path d="M26 53 V143 L100 186 L174 143 V53"/>
+    <path d="M100 94 V186"/>
+  </g>
+</svg>

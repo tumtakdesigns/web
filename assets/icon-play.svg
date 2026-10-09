@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="160" viewBox="0 0 256 160">
+  <title>Overlapping circles icon</title>
+  <g fill="none" stroke="#E7FF24" stroke-width="7">
+    <circle cx="86" cy="80" r="57"/>
+    <circle cx="170" cy="80" r="57"/>
+  </g>
+</svg>

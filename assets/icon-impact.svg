@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <title>Sunburst icon</title>
+  <g fill="none" stroke="#E7FF24" stroke-width="7" stroke-linecap="butt">
+    <path d="M100 14 V65 M100 135 V186 M14 100 H65 M135 100 H186"/>
+    <path d="M39 39 L75 75 M125 125 L161 161 M161 39 L125 75 M75 125 L39 161"/>
+  </g>
+  <circle cx="100" cy="100" r="8" fill="#E7FF24"/>
+</svg>

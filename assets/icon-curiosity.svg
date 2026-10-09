@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="160" viewBox="0 0 256 160">
+  <title>Eye icon</title>
+  <g fill="none" stroke="#E7FF24" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 80 Q128 -8 236 80 Q128 168 20 80 Z"/>
+  </g>
+  <circle cx="128" cy="80" r="31" fill="#E7FF24"/>
+</svg>
