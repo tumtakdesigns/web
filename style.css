@@ -1227,3 +1227,24 @@ h2 {
         display: none;
     }
 }
+
+/* Homepage hero: text and graphics are embedded in hero-image.jpg */
+
+.hero-visual {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-visual > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hide the old HTML-generated hero overlays */
+.hero-visual .hero-note,
+.hero-visual .hero-side-note,
+.hero-visual .hero-wordmark {
+    display: none;
+}
