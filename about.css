@@ -763,3 +763,56 @@ img {
     }
 
 }
+
+/* ========================================
+   STANDARD HEADER — ABOUT PAGE
+======================================== */
+
+.about-header {
+    height: 100px;
+    min-height: 100px;
+    padding: 0 6.1vw;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    gap: 30px;
+}
+
+.about-header .about-logo {
+    grid-column: 1;
+    justify-self: start;
+    width: 85px;
+}
+
+.about-header .about-nav {
+    grid-column: 2;
+    justify-self: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(22px, 3vw, 45px);
+}
+
+.about-header .header-arrow {
+    grid-column: 3;
+    justify-self: end;
+}
+
+/* Consistent mobile header */
+@media (max-width: 600px) {
+    .about-header {
+        height: 80px;
+        min-height: 80px;
+        padding: 0 6vw;
+    }
+
+    .about-header .about-logo {
+        width: 68px;
+    }
+
+    .about-header .about-nav {
+        display: none;
+    }
+}
