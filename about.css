@@ -1,0 +1,762 @@
+
+/* ========================================
+   TUM TAK — ABOUT PAGE
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --paper: #f4f2ed;
+    --black: #080808;
+    --lime: #eaff00;
+    --teal: #00525d;
+    --white: #ffffff;
+    --pad: 6.1vw;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--paper);
+    color: var(--black);
+    font-family: "Inter", Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.eyebrow {
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: .16em;
+}
+
+
+/* HEADER */
+
+.about-header {
+    min-height: 110px;
+    padding: 20px var(--pad);
+
+    display: grid;
+    grid-template-columns: 1fr 2fr auto;
+    align-items: center;
+    gap: 35px;
+}
+
+.about-logo {
+    width: 100px;
+}
+
+.about-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: clamp(20px, 3vw, 45px);
+}
+
+.about-nav a {
+    padding: 8px 0;
+    border-bottom: 1px solid transparent;
+
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: .05em;
+}
+
+.about-nav a:hover,
+.about-nav a.active {
+    border-bottom-color: var(--black);
+}
+
+.header-arrow {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--black);
+    color: white;
+    font-size: 23px;
+
+    transition: transform .25s ease;
+}
+
+.header-arrow:hover {
+    transform: rotate(-35deg);
+}
+
+
+/* HERO */
+
+.about-hero {
+    padding: 0 0 35px var(--pad);
+
+    display: grid;
+    grid-template-columns: 34% 66%;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.about-hero-copy {
+    padding: 32px 15px 0 0;
+}
+
+.about-hero-copy h1 {
+    margin-top: 24px;
+    font-size: clamp(38px, 4.1vw, 65px);
+    line-height: .96;
+    letter-spacing: -.065em;
+    font-weight: 900;
+}
+
+.hero-description {
+    max-width: 365px;
+    margin-top: 20px;
+
+    font-size: 14px;
+    line-height: 1.58;
+    color: #333;
+}
+
+.about-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    min-width: 165px;
+    margin-top: 23px;
+    padding: 14px 20px;
+
+    background: var(--teal);
+    color: white;
+    border-radius: 40px;
+
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: .08em;
+
+    transition: transform .2s ease;
+}
+
+.about-button span {
+    font-size: 20px;
+}
+
+.about-button:hover {
+    transform: translateY(-3px);
+}
+
+
+/* HERO IMAGE */
+
+.about-hero-visual {
+    position: relative;
+    min-width: 0;
+    min-height: 445px;
+    overflow: hidden;
+
+    background: #aaa9a2;
+    border-radius: 13px 0 0 13px;
+}
+
+.about-hero-visual > img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.visual-note {
+    position: absolute;
+    z-index: 2;
+
+    font-family: "DM Mono", monospace;
+    font-size: 11px;
+    line-height: 1.55;
+    letter-spacing: .15em;
+
+    color: white;
+}
+
+.visual-note-left {
+    top: 35px;
+    left: 5%;
+}
+
+.visual-note-left span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin-top: 16px;
+    background: white;
+}
+
+.visual-note-right {
+    top: 35px;
+    right: 5%;
+}
+
+.tak-letters {
+    position: absolute;
+    z-index: 1;
+
+    inset: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    color: var(--lime);
+    font-size: clamp(110px, 16vw, 245px);
+    font-weight: 900;
+    letter-spacing: -.09em;
+    line-height: 1;
+
+    pointer-events: none;
+}
+
+
+/* STATS STRIP */
+
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    padding: 25px var(--pad);
+
+    background: var(--black);
+    color: white;
+}
+
+.stat {
+    min-height: 80px;
+    padding: 0 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    border-right: 1px solid #5a5a5a;
+}
+
+.stat:last-child {
+    border-right: 0;
+}
+
+.stat strong {
+    font-size: 38px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.stat .infinity {
+    font-size: 54px;
+    font-weight: 500;
+}
+
+.stat .stat-word {
+    font-size: clamp(17px, 2vw, 27px);
+}
+
+.stat .stat-tomorrow {
+    font-size: clamp(15px, 1.7vw, 23px);
+}
+
+.stat span {
+    margin-top: 9px;
+
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    letter-spacing: .12em;
+}
+
+
+/* BELIEF SECTION */
+
+.belief-section {
+    display: grid;
+    grid-template-columns: 34% 36% 30%;
+    min-height: 400px;
+}
+
+.belief-copy {
+    padding: 45px 35px 40px var(--pad);
+}
+
+.belief-copy h2 {
+    margin-top: 23px;
+
+    font-size: clamp(40px, 4.2vw, 64px);
+    line-height: .92;
+    letter-spacing: -.065em;
+    font-weight: 900;
+}
+
+.belief-copy > p:last-child {
+    max-width: 310px;
+    margin-top: 20px;
+
+    font-size: 14px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.belief-image {
+    position: relative;
+    overflow: hidden;
+    min-height: 400px;
+    background: #d5d2ca;
+}
+
+.belief-image img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+}
+
+
+/* VALUES */
+
+.values-panel {
+    padding: 35px 25px;
+    background: var(--teal);
+    color: white;
+}
+
+.values-panel > .eyebrow {
+    margin-bottom: 28px;
+}
+
+.value-item {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    align-items: center;
+    gap: 18px;
+
+    margin-bottom: 27px;
+}
+
+.value-item:last-child {
+    margin-bottom: 0;
+}
+
+.value-item img {
+    width: 43px;
+    height: 43px;
+    object-fit: contain;
+}
+
+.value-item h3 {
+    font-family: "DM Mono", monospace;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .08em;
+}
+
+.value-item p {
+    margin-top: 7px;
+    color: rgba(255,255,255,.8);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* CTA */
+
+.about-cta {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    min-height: 200px;
+    padding: 30px var(--pad);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    background: var(--lime);
+}
+
+.cta-copy {
+    position: relative;
+    z-index: 2;
+}
+
+.cta-copy h2 {
+    margin-top: 17px;
+
+    font-size: clamp(28px, 3.2vw, 47px);
+    line-height: .98;
+    letter-spacing: -.05em;
+    font-weight: 900;
+}
+
+.cta-button {
+    position: relative;
+    z-index: 2;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    min-width: 250px;
+    padding: 15px 22px;
+
+    border-radius: 40px;
+    background: var(--black);
+    color: white;
+
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: .07em;
+}
+
+.cta-button span {
+    font-size: 19px;
+}
+
+.cta-mark {
+    position: absolute;
+    z-index: -1;
+
+    right: -30px;
+    bottom: -60px;
+
+    color: rgba(0,0,0,.28);
+    font-size: 110px;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: -.1em;
+}
+
+
+/* FOOTER */
+
+.about-footer {
+    min-height: 105px;
+    padding: 25px var(--pad);
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    align-items: center;
+    gap: 25px;
+
+    background: var(--paper);
+}
+
+.footer-logo {
+    width: 75px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.footer-links a {
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    letter-spacing: .06em;
+}
+
+.footer-tagline {
+    justify-self: center;
+
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    line-height: 1.5;
+    letter-spacing: .08em;
+}
+
+.footer-tagline span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin-top: 8px;
+    background: var(--black);
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: flex-end;
+    gap: 17px;
+}
+
+.footer-socials a {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* TABLET */
+
+@media (max-width: 950px) {
+
+    :root {
+        --pad: 4vw;
+    }
+
+    .about-hero {
+        grid-template-columns: 40% 60%;
+    }
+
+    .about-hero-copy h1 {
+        font-size: clamp(36px, 5vw, 52px);
+    }
+
+    .about-hero-visual {
+        min-height: 390px;
+    }
+
+    .tak-letters {
+        font-size: 16vw;
+    }
+
+    .belief-section {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .belief-copy {
+        padding: 40px var(--pad);
+    }
+
+    .belief-image {
+        min-height: 360px;
+    }
+
+    .values-panel {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px 25px;
+    }
+
+    .values-panel > .eyebrow {
+        grid-column: 1 / -1;
+        margin-bottom: 10px;
+    }
+
+    .value-item {
+        margin-bottom: 12px;
+    }
+
+    .about-footer {
+        grid-template-columns: 1fr 2fr;
+        row-gap: 25px;
+    }
+
+    .footer-tagline {
+        justify-self: start;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    :root {
+        --pad: 6vw;
+    }
+
+    .about-header {
+        min-height: 85px;
+        grid-template-columns: 1fr auto;
+        gap: 15px;
+    }
+
+    .about-logo {
+        width: 72px;
+    }
+
+    .about-nav {
+        display: none;
+    }
+
+    .header-arrow {
+        width: 38px;
+        height: 38px;
+    }
+
+    .about-hero {
+        padding: 20px var(--pad) 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about-hero-copy {
+        padding: 0;
+    }
+
+    .about-hero-copy h1 {
+        font-size: clamp(48px, 12vw, 72px);
+    }
+
+    .hero-description {
+        max-width: 450px;
+        font-size: 14px;
+    }
+
+    .about-hero-visual {
+        min-height: 300px;
+        border-radius: 10px;
+    }
+
+    .tak-letters {
+        font-size: 24vw;
+    }
+
+    .visual-note {
+        font-size: 8px;
+    }
+
+    .visual-note-left,
+    .visual-note-right {
+        top: 18px;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr 1fr;
+        padding: 20px var(--pad);
+    }
+
+    .stat {
+        min-height: 95px;
+        border-right: 1px solid #5a5a5a;
+        border-bottom: 1px solid #5a5a5a;
+    }
+
+    .stat:nth-child(2) {
+        border-right: 0;
+    }
+
+    .stat:nth-child(3),
+    .stat:nth-child(4) {
+        border-bottom: 0;
+    }
+
+    .stat:nth-child(3) {
+        border-right: 1px solid #5a5a5a;
+    }
+
+    .belief-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .belief-copy {
+        padding: 45px var(--pad);
+    }
+
+    .belief-copy h2 {
+        font-size: 55px;
+    }
+
+    .belief-image {
+        min-height: 320px;
+    }
+
+    .values-panel {
+        display: block;
+        padding: 40px var(--pad);
+    }
+
+    .values-panel > .eyebrow {
+        margin-bottom: 30px;
+    }
+
+    .value-item {
+        grid-template-columns: 45px 1fr;
+        margin-bottom: 28px;
+    }
+
+    .about-cta {
+        padding: 40px var(--pad);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .cta-copy h2 {
+        font-size: clamp(27px, 7vw, 40px);
+    }
+
+    .cta-button {
+        min-width: 240px;
+    }
+
+    .cta-mark {
+        font-size: 85px;
+    }
+
+    .about-footer {
+        grid-template-columns: 1fr 1fr;
+        padding-top: 35px;
+        padding-bottom: 35px;
+        gap: 28px 15px;
+    }
+
+    .footer-logo {
+        width: 65px;
+    }
+
+    .footer-links {
+        justify-content: flex-end;
+        gap: 14px;
+    }
+
+    .footer-tagline {
+        font-size: 8px;
+    }
+
+    .footer-socials {
+        gap: 12px;
+    }
+}
+
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}
