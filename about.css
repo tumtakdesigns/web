@@ -1,6 +1,6 @@
 
 /* ========================================
-   TUM TAK — ABOUT PAGE
+   TUM TAK DESIGNS — ABOUT PAGE
 ======================================== */
 
 * {
@@ -36,7 +36,7 @@ a {
 
 img {
     display: block;
-    width: 100%;
+    max-width: 100%;
 }
 
 .eyebrow {
@@ -47,7 +47,9 @@ img {
 }
 
 
-/* HEADER */
+/* ========================================
+   HEADER
+======================================== */
 
 .about-header {
     min-height: 110px;
@@ -61,6 +63,11 @@ img {
 
 .about-logo {
     width: 100px;
+}
+
+.about-logo img,
+.footer-logo img {
+    width: 100%;
 }
 
 .about-nav {
@@ -94,7 +101,7 @@ img {
     place-items: center;
 
     background: var(--black);
-    color: white;
+    color: var(--white);
     font-size: 23px;
 
     transition: transform .25s ease;
@@ -105,7 +112,9 @@ img {
 }
 
 
-/* HERO */
+/* ========================================
+   HERO
+======================================== */
 
 .about-hero {
     padding: 0 0 35px var(--pad);
@@ -122,6 +131,7 @@ img {
 
 .about-hero-copy h1 {
     margin-top: 24px;
+
     font-size: clamp(38px, 4.1vw, 65px);
     line-height: .96;
     letter-spacing: -.065em;
@@ -148,7 +158,7 @@ img {
     padding: 14px 20px;
 
     background: var(--teal);
-    color: white;
+    color: var(--white);
     border-radius: 40px;
 
     font-family: "DM Mono", monospace;
@@ -167,7 +177,10 @@ img {
 }
 
 
-/* HERO IMAGE */
+/* HERO IMAGE
+   Text and graphics are embedded in about-hero.jpg.
+   No HTML text overlays are applied here.
+======================================== */
 
 .about-hero-visual {
     position: relative;
@@ -185,59 +198,16 @@ img {
 
     width: 100%;
     height: 100%;
+    max-width: none;
+
     object-fit: cover;
-}
-
-.visual-note {
-    position: absolute;
-    z-index: 2;
-
-    font-family: "DM Mono", monospace;
-    font-size: 11px;
-    line-height: 1.55;
-    letter-spacing: .15em;
-
-    color: white;
-}
-
-.visual-note-left {
-    top: 35px;
-    left: 5%;
-}
-
-.visual-note-left span {
-    display: block;
-    width: 30px;
-    height: 2px;
-    margin-top: 16px;
-    background: white;
-}
-
-.visual-note-right {
-    top: 35px;
-    right: 5%;
-}
-
-.tak-letters {
-    position: absolute;
-    z-index: 1;
-
-    inset: 0;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
-    color: var(--lime);
-    font-size: clamp(110px, 16vw, 245px);
-    font-weight: 900;
-    letter-spacing: -.09em;
-    line-height: 1;
-
-    pointer-events: none;
+    object-position: center;
 }
 
 
-/* STATS STRIP */
+/* ========================================
+   STATS STRIP
+======================================== */
 
 .about-stats {
     display: grid;
@@ -246,7 +216,7 @@ img {
     padding: 25px var(--pad);
 
     background: var(--black);
-    color: white;
+    color: var(--white);
 }
 
 .stat {
@@ -294,7 +264,9 @@ img {
 }
 
 
-/* BELIEF SECTION */
+/* ========================================
+   BELIEF SECTION
+======================================== */
 
 .belief-section {
     display: grid;
@@ -327,25 +299,33 @@ img {
 .belief-image {
     position: relative;
     overflow: hidden;
+    min-width: 0;
     min-height: 400px;
+
     background: #d5d2ca;
 }
 
 .belief-image img {
-    width: 100%;
-    height: 100%;
     position: absolute;
     inset: 0;
+
+    width: 100%;
+    height: 100%;
+    max-width: none;
+
     object-fit: cover;
+    object-position: center;
 }
 
 
-/* VALUES */
+/* ========================================
+   VALUES PANEL
+======================================== */
 
 .values-panel {
     padding: 35px 25px;
     background: var(--teal);
-    color: white;
+    color: var(--white);
 }
 
 .values-panel > .eyebrow {
@@ -380,13 +360,16 @@ img {
 
 .value-item p {
     margin-top: 7px;
+
     color: rgba(255,255,255,.8);
     font-size: 12px;
     line-height: 1.5;
 }
 
 
-/* CTA */
+/* ========================================
+   CTA
+======================================== */
 
 .about-cta {
     position: relative;
@@ -431,16 +414,23 @@ img {
     padding: 15px 22px;
 
     border-radius: 40px;
+
     background: var(--black);
-    color: white;
+    color: var(--white);
 
     font-family: "DM Mono", monospace;
     font-size: 10px;
     letter-spacing: .07em;
+
+    transition: transform .2s ease;
 }
 
 .cta-button span {
     font-size: 19px;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
 }
 
 .cta-mark {
@@ -458,7 +448,9 @@ img {
 }
 
 
-/* FOOTER */
+/* ========================================
+   FOOTER
+======================================== */
 
 .about-footer {
     min-height: 105px;
@@ -517,8 +509,21 @@ img {
     font-weight: 600;
 }
 
+.about-nav a,
+.footer-links a,
+.footer-socials a {
+    transition: opacity .2s ease;
+}
 
-/* TABLET */
+.footer-links a:hover,
+.footer-socials a:hover {
+    opacity: .55;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
 
 @media (max-width: 950px) {
 
@@ -538,10 +543,6 @@ img {
         min-height: 390px;
     }
 
-    .tak-letters {
-        font-size: 16vw;
-    }
-
     .belief-section {
         grid-template-columns: 1fr 1fr;
     }
@@ -556,6 +557,7 @@ img {
 
     .values-panel {
         grid-column: 1 / -1;
+
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 15px 25px;
@@ -582,7 +584,9 @@ img {
 }
 
 
-/* MOBILE */
+/* ========================================
+   MOBILE
+======================================== */
 
 @media (max-width: 600px) {
 
@@ -611,6 +615,7 @@ img {
 
     .about-hero {
         padding: 20px var(--pad) 30px;
+
         display: flex;
         flex-direction: column;
         gap: 30px;
@@ -634,17 +639,8 @@ img {
         border-radius: 10px;
     }
 
-    .tak-letters {
-        font-size: 24vw;
-    }
-
-    .visual-note {
-        font-size: 8px;
-    }
-
-    .visual-note-left,
-    .visual-note-right {
-        top: 18px;
+    .about-hero-visual > img {
+        object-position: center;
     }
 
     .about-stats {
@@ -704,6 +700,7 @@ img {
 
     .about-cta {
         padding: 40px var(--pad);
+
         flex-direction: column;
         align-items: flex-start;
         gap: 30px;
@@ -723,6 +720,7 @@ img {
 
     .about-footer {
         grid-template-columns: 1fr 1fr;
+
         padding-top: 35px;
         padding-bottom: 35px;
         gap: 28px 15px;
@@ -744,12 +742,16 @@ img {
     .footer-socials {
         gap: 12px;
     }
+
 }
 
 
-/* ACCESSIBILITY */
+/* ========================================
+   REDUCED MOTION
+======================================== */
 
 @media (prefers-reduced-motion: reduce) {
+
     html {
         scroll-behavior: auto;
     }
@@ -759,4 +761,5 @@ img {
     *::after {
         transition: none !important;
     }
+
 }
