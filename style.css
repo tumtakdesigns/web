@@ -1174,3 +1174,56 @@ h2 {
     }
 
 }
+
+/* ========================================
+   STANDARD HEADER — HOMEPAGE
+======================================== */
+
+.site-header {
+    min-height: 100px;
+    height: 100px;
+    padding: 0 6.1vw;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    gap: 30px;
+}
+
+.site-header .logo {
+    grid-column: 1;
+    justify-self: start;
+    width: 85px;
+}
+
+.site-header .main-nav {
+    grid-column: 2;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(22px, 3vw, 45px);
+}
+
+.site-header .nav-talk {
+    grid-column: 3;
+    justify-self: end;
+    white-space: nowrap;
+}
+
+/* Consistent mobile header */
+@media (max-width: 700px) {
+    .site-header {
+        height: 80px;
+        min-height: 80px;
+        padding: 0 6vw;
+    }
+
+    .site-header .logo {
+        width: 68px;
+    }
+
+    .site-header .main-nav {
+        display: none;
+    }
+}
